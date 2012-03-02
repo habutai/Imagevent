@@ -1,7 +1,7 @@
 <h1>Upload an Image!</h1>
 <%= form_tag ({:action => :upload}, :multipart =>true) do%> <!-- added as part of Friday-->
 <%=file_field_tag 'upload'%> <!-- added as part of Friday...from http://guides.rubyonrails.org/form_helpers.html#uploading-files -->
-<%= form_for(@image do |f| %> 
+<%= form_for(@image) do |f| %> 
 				
   <div class="field">
     <%= f.label :name, 'Title'-%><br/>
@@ -20,3 +20,4 @@
   </div>
  
 <% end %>
+<%end%>
